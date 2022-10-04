@@ -70,7 +70,9 @@ Lil Supa
 
 ### ESTILOS SIGN IN AND SIGN UP
 
-```Darle estilos a las páginas de SIGN IN y SIGN UP utilizando tailwindCSS
+```
+Darle estilos a las páginas de
+SIGN IN y SIGN UP utilizando tailwindCSS
 y algún componente ofrecido en este framework, sin embargo, con ciertos estilos generados por mi.
 ```
 
