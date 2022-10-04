@@ -73,3 +73,9 @@ Lil Supa
 ```Darle estilos a las páginas de SIGN IN y SIGN UP utilizando tailwindCSS
 y algún componente ofrecido en este framework, sin embargo, con ciertos estilos generados por mi.
 ```
+
+### PLAN PARA EL 05/10
+
+```
+hacer los componentes de NavBar, TaskItem, NewTask, Footer y añadirlos todos al Home component. Mejorar los diseños de Sign In y Sign Up.
+```
