@@ -1,26 +1,42 @@
 <template>
   <div class="flex flex-col bg-blue-300">
-    <h2 class="flex justify-center text-3xl font-bold m-3">Create task</h2>
+    <h1 class="flex justify-center text-5xl font-bold m-3">Create task</h1>
+    <div>
+      <p class="flex justify-center mb-6 font-serif">
+        Lists and cards are the building blocks of organizing work on a
+        TaskCard. 📋
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <input
+        class="block p-4 w-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4"
+        v-model="taskTitle"
+        type="text"
+        id="newTaskTitle"
+        placeholder="Title"
+      />
+    </div>
 
-    <input
-      class="mb-2 w-1/2 flex items-center"
-      v-model="taskTitle"
-      type="text"
-      id="newTaskTitle"
-      placeholder="Title"
-    />
-
-    <textarea
-      class="w-1/2 flex justify-center"
-      cols="28"
-      rows="5"
-      v-model="taskDesc"
-      type="text"
-      id="newTaskDesc"
-      placeholder="Description"
-    ></textarea>
+    <div class="flex justify-center">
+      <input
+        class="block p-4 w-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        cols="28"
+        rows="5"
+        v-model="taskDesc"
+        type="text"
+        id="newTaskDesc"
+        placeholder="Description"
+      />
+    </div>
     <br />
-    <button @click.prevent="uploadTask">Create</button>
+    <div class="flex justify-center">
+      <button
+        @click.prevent="uploadTask"
+        class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-5"
+      >
+        Create
+      </button>
+    </div>
   </div>
   <div>
     <h3 v-if="errorBool">{{ emptyString }}</h3>

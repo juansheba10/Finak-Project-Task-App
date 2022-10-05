@@ -4,21 +4,18 @@
     <NewTask @childNewTask="sendToStore" />
     <br />
     <p>Total tasks: {{ doneTaskArray.length }} / {{ taskArray.length }}</p>
-  </div>
-  <div id="todoTasks" class="flexbox_element">
-    <h2 class="taskTitle">({{ todoTaskArray.length }}) 💪TO-DO</h2>
 
-    <ol>
+    <div class="">
       <TaskItem
         @updateTasksAgain="readFromStore"
         v-for="(task, index) in todoTaskArray"
         :key="index"
         :taskData="task"
       ></TaskItem>
-    </ol>
+    </div>
   </div>
 
-  <div id="doneTasks" class="flexbox_element">
+  <!-- <div>
     <h2 class="taskTitle">({{ doneTaskArray.length }}) ⭐DONE</h2>
     <div class="taskContainerElement">
       <ol>
@@ -30,7 +27,7 @@
         ></TaskItem>
       </ol>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script setup>

@@ -81,3 +81,17 @@ y algún componente ofrecido en este framework, sin embargo, con ciertos estilos
 ```
 hacer los componentes de NavBar, TaskItem, NewTask, Footer y añadirlos todos al Home component. Mejorar los diseños de Sign In y Sign Up.
 ```
+
+### OBJETIVOS ALCANZADOS DÍA 05/10
+
+```
+Conseguí hacer las funcionalidades del TaskItem y NewTask. Se hace las tareas y se reflejan en la ui, además de la base de datos.
+Además la navbar está lista y con el responsive.
+```
+
+### PLAN PARA EL 06/10
+
+```
+Hacer los estilos tanto del task item y del new task.
+Empezar el footer.
+```
