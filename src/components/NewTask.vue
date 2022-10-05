@@ -1,8 +1,55 @@
 <template>
-  <div>New Task Component</div>
+  <div class="flex flex-col bg-blue-300">
+    <h2 class="flex justify-center text-3xl font-bold m-3">Create task</h2>
+
+    <input
+      class="mb-2 w-1/2 flex items-center"
+      v-model="taskTitle"
+      type="text"
+      id="newTaskTitle"
+      placeholder="Title"
+    />
+
+    <textarea
+      class="w-1/2 flex justify-center"
+      cols="28"
+      rows="5"
+      v-model="taskDesc"
+      type="text"
+      id="newTaskDesc"
+      placeholder="Description"
+    ></textarea>
+    <br />
+    <button @click.prevent="uploadTask">Create</button>
+  </div>
+  <div>
+    <h3 v-if="errorBool">{{ emptyString }}</h3>
+  </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { supabase } from "../supabase";
+import { useTaskStore } from "../stores/task.js";
+const emit = defineEmits(["childNewTask"]);
+let taskTitle = ref("");
+let taskDesc = ref("");
+let errorBool = ref(false);
+const emptyString = ref("");
+function uploadTask() {
+  if (taskTitle.value === "") {
+    errorBool.value = true;
+    emptyString.value = "Title is required.";
+    setTimeout(() => {
+      errorBool.value = false;
+    }, 1000);
+  } else {
+    emit("childNewTask", taskTitle.value, taskDesc.value);
+    taskTitle.value = "";
+    taskDesc.value = "";
+    console.log(taskTitle.value);
+  }
+}
 // constant to save a variable that define the custom event that will be emitted to the homeView
 
 // constant to save a variable that holds the value of the title input field of the new task

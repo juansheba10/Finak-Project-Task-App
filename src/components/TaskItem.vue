@@ -1,13 +1,73 @@
 <template>
-  <div>Task Item Component</div>
+  <div class="taskItem" :data-id="taskData.id">
+    <li>
+      <div v-if="!editMode">
+        <b>{{ taskData.title }} </b><br />
+        <i> {{ taskData.description }}</i
+        ><br />
+        <button v-if="taskData.is_complete" @click="uncompleteOneTask">
+          UNDO
+        </button>
+        <button v-else @click="completeOneTask" class="green_btn">DONE</button>
+        <button
+          v-if="!taskData.is_complete"
+          @click="editMode = true"
+          class="darkgray_btn"
+        >
+          Edit
+        </button>
+        <button @click="deleteTask" class="red_btn">Delete</button>
+      </div>
+      <div v-else>
+        <input type="text" v-model="taskData.title" /><br />
+        <input type="text" v-model="taskData.description" /><br />
+        <button @click="saveEditedTask()" class="green_btn">Save</button>
+        <button @click="editMode = false" class="red_btn">Cancel</button>
+      </div>
+    </li>
+  </div>
 </template>
 
 <script setup>
-// const emit = defineEmits([
-//   ENTER-EMITS-HERE
-// ])
-
-// const props = defineProps(["ENTER-PROP-HERE"]);
+import { ref } from "vue";
+import { useTaskStore } from "../stores/task.js";
+// Data that TaskItem is recieved when called in Home
+const props = defineProps(["taskData"]);
+// External event that Home will respond with a function to
+const emit = defineEmits(["updateTasksAgain"]);
+// Store reference
+const taskStore = useTaskStore();
+//Current ID
+let myID = props.taskData.id;
+// Edit mode
+let editMode = ref(false);
+async function saveEditedTask() {
+  myID = props.taskData.id;
+  editMode.value = false;
+  await taskStore.editTask(
+    myID,
+    props.taskData.title,
+    props.taskData.description
+  );
+  emit("updateTasksAgain");
+}
+async function deleteTask() {
+  myID = props.taskData.id;
+  if (confirm("Are you sure you want to delete task id " + myID + "?")) {
+    await taskStore.deleteSpecificTask(myID);
+    emit("updateTasksAgain");
+  }
+}
+async function completeOneTask() {
+  myID = props.taskData.id;
+  await taskStore.completeTask(myID);
+  emit("updateTasksAgain");
+}
+async function uncompleteOneTask() {
+  myID = props.taskData.id;
+  await taskStore.uncompleteTask(myID);
+  emit("updateTasksAgain");
+}
 </script>
 
 <style></style>

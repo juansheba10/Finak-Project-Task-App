@@ -1,13 +1,67 @@
 <template>
   <div>
-    hello
-
     <Nav />
+    <NewTask @childNewTask="sendToStore" />
+    <br />
+    <p>Total tasks: {{ doneTaskArray.length }} / {{ taskArray.length }}</p>
+  </div>
+  <div id="todoTasks" class="flexbox_element">
+    <h2 class="taskTitle">({{ todoTaskArray.length }}) 💪TO-DO</h2>
+
+    <ol>
+      <TaskItem
+        @updateTasksAgain="readFromStore"
+        v-for="(task, index) in todoTaskArray"
+        :key="index"
+        :taskData="task"
+      ></TaskItem>
+    </ol>
+  </div>
+
+  <div id="doneTasks" class="flexbox_element">
+    <h2 class="taskTitle">({{ doneTaskArray.length }}) ⭐DONE</h2>
+    <div class="taskContainerElement">
+      <ol>
+        <TaskItem
+          @updateTasksAgain="readFromStore"
+          v-for="(task, index) in doneTaskArray"
+          :key="index"
+          :taskData="task"
+        ></TaskItem>
+      </ol>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
 import Nav from "../components/Nav.vue";
+import NewTask from "@/components/NewTask.vue";
+import TaskItem from "../components/TaskItem.vue";
+import { useTaskStore } from "../stores/task.js";
+//coger el email del usuario
+import { useUserStore } from "@/stores/user.js";
+// nos definimos la tienda del usuario dentro de una constante
+const taskStore = useTaskStore();
+// Inicializamos array de tareas
+let taskArray = ref([]);
+let todoTaskArray = ref([]);
+let doneTaskArray = ref([]);
+async function readFromStore() {
+  taskArray.value = await taskStore.fetchTasks();
+  todoTaskArray.value = taskArray.value.filter(
+    (element) => element.is_complete == false
+  );
+  doneTaskArray.value = taskArray.value.filter(
+    (element) => element.is_complete == true
+  );
+}
+readFromStore();
+// Enviamos los datos de la tarea a la Tienda taskStore
+async function sendToStore(title, description) {
+  await taskStore.addTask(title, description);
+  readFromStore();
+}
 </script>
 
 <style></style>
