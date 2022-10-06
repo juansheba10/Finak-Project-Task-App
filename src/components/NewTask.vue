@@ -9,7 +9,26 @@
     </div>
     <div class="flex justify-center">
       <input
-        class="block p-4 w-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4 shadow-md"
+        class="
+          block
+          p-4
+          w-1/2
+          text-gray-900
+          bg-gray-50
+          rounded-lg
+          border border-gray-300
+          sm:text-md
+          focus:ring-blue-500 focus:border-blue-500
+          dark:bg-gray-700
+          dark:border-gray-600
+          dark:placeholder-gray-400
+          dark:text-white
+          dark:focus:ring-blue-500
+          dark:focus:border-blue-500
+          mb-4
+          shadow-md
+          md:w-2/3
+        "
         v-model="taskTitle"
         type="text"
         id="newTaskTitle"
@@ -19,7 +38,26 @@
 
     <div class="flex justify-center">
       <textarea
-        class="block p-4 w-1/2 h-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-md"
+        class="
+          block
+          p-4
+          w-1/2
+          h-1/2
+          text-gray-900
+          bg-gray-50
+          rounded-lg
+          border border-gray-300
+          sm:text-md
+          focus:ring-blue-500 focus:border-blue-500
+          dark:bg-gray-700
+          dark:border-gray-600
+          dark:placeholder-gray-400
+          dark:text-white
+          dark:focus:ring-blue-500
+          dark:focus:border-blue-500
+          shadow-md
+          md:w-2/3
+        "
         cols="28"
         rows="5"
         v-model="taskDesc"
@@ -32,7 +70,18 @@
     <div class="flex justify-center">
       <button
         @click.prevent="uploadTask"
-        class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-5 w-1/4"
+        class="
+          bg-green-500
+          hover:bg-blue-700
+          text-white
+          font-bold
+          py-2
+          px-4
+          rounded-full
+          mb-5
+          w-1/4
+          md:w-1/3
+        "
       >
         Create
       </button>

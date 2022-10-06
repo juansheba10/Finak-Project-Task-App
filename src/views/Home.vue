@@ -3,12 +3,20 @@
     <Nav />
     <div class="bg-gray-100">
       <NewTask @childNewTask="sendToStore" />
-      <br />
-      <p>Total tasks: {{ doneTaskArray.length }} / {{ taskArray.length }}</p>
-
-      <div class="flex m-2 mt-24 flex-wrap pl-5">
+      <div
+        class="
+          flex
+          m-2
+          mt-24
+          flex-wrap
+          pl-5
+          md:pl-
+          ml-5
+          md:flex md:justify-center
+        "
+      >
         <TaskItem
-          class="m-2"
+          class="ml-2"
           @updateTasksAgain="readFromStore"
           v-for="(task, index) in todoTaskArray"
           :key="index"

@@ -1,16 +1,45 @@
 <template>
   <div
-    class="taskItem p-9 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 w-1/2 m-5"
+    class="
+      taskItem
+      p-9
+      max-w-sm
+      bg-white
+      rounded-lg
+      border border-gray-200
+      shadow-md
+      dark:bg-gray-800 dark:border-gray-700
+      w-full
+      lg:w-1/4
+      md:w-full md:
+      m-5
+    "
     :data-id="taskData.id"
   >
     <div v-if="!editMode">
       <b
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center"
+        class="
+          mb-2
+          text-2xl
+          font-bold
+          tracking-tight
+          text-gray-900
+          dark:text-white
+          flex
+          justify-center
+        "
         >{{ taskData.title }} </b
       ><br />
 
       <i
-        class="mb-3 font-normal text-gray-700 dark:text-gray-400 flex justify-center"
+        class="
+          mb-3
+          font-normal
+          text-gray-700
+          dark:text-gray-400
+          flex
+          justify-center
+        "
       >
         {{ taskData.description }}</i
       ><br />
@@ -21,20 +50,59 @@
         <button
           v-else
           @click="completeOneTask"
-          class="inline-flex items-center py-2 px-3 text-sm font-bold text-center text-white bg-green-500 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="
+            inline-flex
+            items-center
+            py-2
+            px-3
+            text-sm
+            font-bold
+            text-center text-white
+            bg-green-500
+            rounded-lg
+            hover:bg-green-800
+            focus:ring-4 focus:outline-none focus:ring-blue-300
+            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+          "
         >
           DONE
         </button>
         <button
           v-if="!taskData.is_complete"
           @click="editMode = true"
-          class="inline-flex items-center py-2 px-3 text-sm font-bold text-center text-white bg-orange-500 rounded-lg hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="
+            inline-flex
+            items-center
+            py-2
+            px-3
+            text-sm
+            font-bold
+            text-center text-white
+            bg-orange-500
+            rounded-lg
+            hover:bg-orange-800
+            focus:ring-4 focus:outline-none focus:ring-blue-300
+            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+          "
         >
           Edit
         </button>
         <button
           @click="deleteTask"
-          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="
+            inline-flex
+            items-center
+            py-2
+            px-3
+            text-sm
+            font-medium
+            text-center text-white
+            bg-red-500
+            rounded-lg
+            hover:bg-red-800
+            focus:ring-4 focus:outline-none focus:ring-blue-300
+            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+          "
         >
           Delete
         </button>
@@ -44,7 +112,25 @@
       <h1 class="mb-3 font-serif font-semibold text-center">Edit Your Task</h1>
       <h3 class="font-serif font-semibold">Title</h3>
       <input
-        class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4 shadow-md"
+        class="
+          block
+          p-4
+          w-full
+          text-gray-900
+          bg-gray-50
+          rounded-lg
+          border border-gray-300
+          sm:text-md
+          focus:ring-blue-500 focus:border-blue-500
+          dark:bg-gray-700
+          dark:border-gray-600
+          dark:placeholder-gray-400
+          dark:text-white
+          dark:focus:ring-blue-500
+          dark:focus:border-blue-500
+          mb-4
+          shadow-md
+        "
         type="text"
         v-model="taskData.title"
       />
@@ -52,19 +138,64 @@
       <h4 class="font-serif font-semibold mt-3">Description</h4>
       <textarea
         type="text"
-        class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4 shadow-md"
+        class="
+          block
+          p-4
+          w-full
+          text-gray-900
+          bg-gray-50
+          rounded-lg
+          border border-gray-300
+          sm:text-md
+          focus:ring-blue-500 focus:border-blue-500
+          dark:bg-gray-700
+          dark:border-gray-600
+          dark:placeholder-gray-400
+          dark:text-white
+          dark:focus:ring-blue-500
+          dark:focus:border-blue-500
+          mb-4
+          shadow-md
+        "
         v-model="taskData.description"
       /><br />
       <div class="flex justify-center">
         <button
           @click="saveEditedTask()"
-          class="inline-flex items-center mr-5 py-3 px-4 text-sm font-bold text-center text-white bg-blue-500 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="
+            inline-flex
+            items-center
+            mr-5
+            py-3
+            px-4
+            text-sm
+            font-bold
+            text-center text-white
+            bg-blue-500
+            rounded-lg
+            hover:bg-red-800
+            focus:ring-4 focus:outline-none focus:ring-blue-300
+            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+          "
         >
           Save
         </button>
         <button
           @click="editMode = false"
-          class="inline-flex items-center py-3 px-4 text-sm font-bold text-center text-white bg-red-500 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="
+            inline-flex
+            items-center
+            py-3
+            px-4
+            text-sm
+            font-bold
+            text-center text-white
+            bg-red-500
+            rounded-lg
+            hover:bg-red-800
+            focus:ring-4 focus:outline-none focus:ring-blue-300
+            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+          "
         >
           Cancel
         </button>
