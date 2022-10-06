@@ -1,6 +1,6 @@
 <template>
   <div
-    class="taskItem p-9 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 w-full m-5"
+    class="taskItem p-9 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 w-1/2 m-5"
     :data-id="taskData.id"
   >
     <div v-if="!editMode">
