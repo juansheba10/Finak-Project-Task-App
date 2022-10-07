@@ -1,6 +1,14 @@
 <template>
   <nav
-    class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
+    class="
+      bg-white
+      border-gray-200
+      px-2
+      sm:px-4
+      py-2.5
+      rounded
+      dark:bg-gray-900
+    "
   >
     <div class="container flex flex-wrap justify-between items-center mx-auto">
       <a href="" class="flex items-center">
@@ -10,14 +18,31 @@
           alt="Flowbite Logo"
         />
         <span
-          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          class="
+            self-center
+            text-2xl
+            font-semibold
+            whitespace-nowrap
+            dark:text-white
+          "
           >TaskApp</span
         >
       </a>
       <button
         data-collapse-toggle="navbar-default"
         type="button"
-        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="
+          inline-flex
+          items-center
+          p-2
+          ml-3
+          text-sm text-gray-500
+          rounded-lg
+          md:hidden
+          hover:bg-gray-100
+          focus:outline-none focus:ring-2 focus:ring-gray-200
+          dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+        "
         aria-controls="navbar-default"
         aria-expanded="false"
       >
@@ -38,41 +63,133 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          class="
+            flex flex-col
+            p-4
+            mt-4
+            bg-gray-50
+            rounded-lg
+            border border-gray-100
+            md:flex-row
+            md:space-x-8
+            md:mt-0
+            md:text-sm
+            md:font-medium
+            md:border-0
+            md:bg-white
+            dark:bg-gray-800
+            md:dark:bg-gray-900
+            dark:border-gray-700
+          "
         >
           <li>
             <a
+              @click="signOut"
               href="#"
-              class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+              class="
+                block
+                py-2
+                pr-4
+                pl-3
+                text-white
+                bg-blue-700
+                rounded
+                md:bg-transparent md:text-blue-700 md:p-0
+                dark:text-white
+              "
               aria-current="page"
-              >Home</a
+              >Log Out</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="
+                block
+                py-2
+                pr-4
+                pl-3
+                text-gray-700
+                rounded
+                hover:bg-gray-100
+                md:hover:bg-transparent
+                md:border-0
+                md:hover:text-blue-700
+                md:p-0
+                dark:text-gray-400
+                md:dark:hover:text-white
+                dark:hover:bg-gray-700 dark:hover:text-white
+                md:dark:hover:bg-transparent
+              "
               >About</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="
+                block
+                py-2
+                pr-4
+                pl-3
+                text-gray-700
+                rounded
+                hover:bg-gray-100
+                md:hover:bg-transparent
+                md:border-0
+                md:hover:text-blue-700
+                md:p-0
+                dark:text-gray-400
+                md:dark:hover:text-white
+                dark:hover:bg-gray-700 dark:hover:text-white
+                md:dark:hover:bg-transparent
+              "
               >Services</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="
+                block
+                py-2
+                pr-4
+                pl-3
+                text-gray-700
+                rounded
+                hover:bg-gray-100
+                md:hover:bg-transparent
+                md:border-0
+                md:hover:text-blue-700
+                md:p-0
+                dark:text-gray-400
+                md:dark:hover:text-white
+                dark:hover:bg-gray-700 dark:hover:text-white
+                md:dark:hover:bg-transparent
+              "
               >Pricing</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="
+                block
+                py-2
+                pr-4
+                pl-3
+                text-gray-700
+                rounded
+                hover:bg-gray-100
+                md:hover:bg-transparent
+                md:border-0
+                md:hover:text-blue-700
+                md:p-0
+                dark:text-gray-400
+                md:dark:hover:text-white
+                dark:hover:bg-gray-700 dark:hover:text-white
+                md:dark:hover:bg-transparent
+              "
               >Contact</a
             >
           </li>
@@ -84,6 +201,35 @@
 
 <script setup>
 import { ref } from "vue";
+import { useUserStore } from "../stores/user";
+import { useRouter } from "vue-router";
+//CONST PARA USAR LA TIENDA DEL USUARIO PARA HACER MI SIGN OUT
+
+const user = useUserStore();
+//Función para hacer sign-out
+
+// Error Message
+const errorMsg = ref("");
+
+// Router to push user to SignedIn component
+const redirect = useRouter();
+
+// Arrow function to SignOut User
+const signOut = async () => {
+  try {
+    // calls the user store and send the users info to backend to logIn
+    await user.signOut();
+    // redirects user to the homeView
+    redirect.push({ path: "/auth/login" });
+  } catch (error) {
+    // displays error message
+    errorMsg.value = `Error: ${error.message}`;
+    // hides error message
+    setTimeout(() => {
+      errorMsg.value = null;
+    }, 5000);
+  }
+};
 
 //constant to save a variable that will hold the use router method
 

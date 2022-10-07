@@ -31,6 +31,17 @@ export const useUserStore = defineStore("user", {
         console.log(this.user);
       }
     },
+
+
+      //const { error } = await supabase.auth.signOut()
+      //REFERENCIA DE FUNCIÓN SIGN-OUT DE SUPABASE
+      // Función asíncrona para conectarnos al cliente de Supabase y hacer sign out
+
+    async signOut() {
+        
+      const { error } = await supabase.auth.signOut()
+
+      },
     persist: {
       enabled: true,
       strategies: [

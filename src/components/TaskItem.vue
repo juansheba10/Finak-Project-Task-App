@@ -9,10 +9,12 @@
       border border-gray-200
       shadow-md
       dark:bg-gray-800 dark:border-gray-700
+      md:justify-center
+      sm:h-full
       w-full
-      lg:w-1/4
-      md:w-full md:
+      md:w-2/5 md:
       m-5
+      animate-animated animate-fadeInUp
     "
     :data-id="taskData.id"
   >
@@ -27,6 +29,8 @@
           dark:text-white
           flex
           justify-center
+          tranition
+          duration-200
         "
         >{{ taskData.title }} </b
       ><br />
@@ -43,7 +47,7 @@
       >
         {{ taskData.description }}</i
       ><br />
-      <div class="flex justify-around">
+      <div class="flex justify-around transition duration-200">
         <button v-if="taskData.is_complete" @click="uncompleteOneTask" class="">
           UNDO
         </button>

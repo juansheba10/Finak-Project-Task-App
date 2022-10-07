@@ -71,7 +71,7 @@
       <button
         @click.prevent="uploadTask"
         class="
-          bg-green-500
+          bg-blue-500
           hover:bg-blue-700
           text-white
           font-bold

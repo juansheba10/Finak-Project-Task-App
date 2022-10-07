@@ -1,28 +1,21 @@
 <template>
   <div>
     <Nav />
+
     <div class="bg-gray-100">
       <NewTask @childNewTask="sendToStore" />
-      <div
-        class="
-          flex
-          m-2
-          mt-24
-          flex-wrap
-          pl-5
-          md:pl-
-          ml-5
-          md:flex md:justify-center
-        "
-      >
+      <div class="flex m-2 mt-24 flex-wrap lg:ml-20 pl-5 md:pl- ml-5 md:flex">
         <TaskItem
-          class="ml-2"
+          class="ml-2 animate__animated animate__fadeInRight"
           @updateTasksAgain="readFromStore"
           v-for="(task, index) in todoTaskArray"
           :key="index"
           :taskData="task"
         ></TaskItem>
       </div>
+      <p class="flex justify-center">
+        Total tasks: {{ doneTaskArray.length }} / {{ taskArray.length }}
+      </p>
     </div>
     <Footer />
   </div>
@@ -51,6 +44,7 @@ import { useTaskStore } from "../stores/task.js";
 //coger el email del usuario
 import { useUserStore } from "@/stores/user.js";
 import Footer from "../components/Footer.vue";
+import "animate.css";
 // nos definimos la tienda del usuario dentro de una constante
 const taskStore = useTaskStore();
 // Inicializamos array de tareas
