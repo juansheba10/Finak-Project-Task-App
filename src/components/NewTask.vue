@@ -28,6 +28,7 @@
           mb-4
           shadow-md
           md:w-2/3
+          sm:w-2/3
         "
         v-model="taskTitle"
         type="text"
@@ -57,6 +58,7 @@
           dark:focus:border-blue-500
           shadow-md
           md:w-2/3
+          sm:w-2/3
         "
         cols="28"
         rows="5"
@@ -81,6 +83,7 @@
           mb-5
           w-1/4
           md:w-1/3
+          sm:w-1/3
         "
       >
         Create

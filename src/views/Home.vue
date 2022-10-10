@@ -4,7 +4,7 @@
 
     <div class="bg-gray-100">
       <NewTask @childNewTask="sendToStore" />
-      <div class="flex m-2 mt-24 flex-wrap lg:ml-20 pl-5 md:pl- ml-5 md:flex">
+      <div class="flex m-2 mt-24 flex-wrap lg:ml-20 pl-5 md: ml-5 md:flex">
         <TaskItem
           class="ml-2 animate__animated animate__fadeInRight"
           @updateTasksAgain="readFromStore"

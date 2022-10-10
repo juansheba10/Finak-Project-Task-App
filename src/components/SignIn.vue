@@ -16,8 +16,9 @@
         <h1 class="text-white font-bold text-4xl font-sans">Simple App</h1>
         <p class="text-white mt-1">The simplest app to use</p>
         <div class="flex justify-center lg:justify-start mt-6">
-          <a
-            href="#"
+          <PersonalRouter
+            :route="route1"
+            text="What our clients say?"
             class="
               hover:bg-indigo-700 hover:text-white hover:-translate-y-1
               transition-all
@@ -31,8 +32,7 @@
               font-bold
               mb-2
             "
-            >Get Started</a
-          >
+          />
         </div>
       </div>
     </div>
@@ -172,7 +172,9 @@
               >Forgot Password ?</span
             >
 
-            <a
+            <PersonalRouter
+              :route="route"
+              :buttonText="buttonText"
               href="#"
               class="
                 text-sm
@@ -183,8 +185,7 @@
                 duration-500
                 transition-all
               "
-              >Don’t have an account?
-            </a>
+            />
           </div>
         </form>
       </div>
@@ -200,10 +201,11 @@ import { useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
 import { storeToRefs } from "pinia";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline";
+
 // Route Variables
 const route = "/auth/sign-up";
-const buttonText = "Test the Sign Up Route";
-
+const buttonText = "Don't have an account";
+const route1 = "/auth/clients-section";
 // Input Fields
 const email = ref("");
 const password = ref("");
