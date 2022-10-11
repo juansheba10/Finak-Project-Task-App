@@ -31,7 +31,7 @@
           <PersonalRouter
             href="#"
             text="Login"
-            :route="route"
+            :route="route1"
             class="
               text-gray-800
               dark:text-white
@@ -525,6 +525,7 @@
       </div>
     </div>
   </section>
+
   <Footer />
 </template>
 

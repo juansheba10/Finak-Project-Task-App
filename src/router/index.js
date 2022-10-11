@@ -16,7 +16,9 @@ const routes = [
     ],
   },
   {path:"/clients-section", component: ClientsSection},
-  { path: "/", component: Home },
+  {
+    path: "/", component: Home,
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),

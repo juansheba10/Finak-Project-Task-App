@@ -102,8 +102,10 @@
             >
           </li>
           <li>
-            <a
+            <PersonalRouter
               href="#"
+              text="Testimonials"
+              :route="route"
               class="
                 block
                 py-2
@@ -121,8 +123,7 @@
                 dark:hover:bg-gray-700 dark:hover:text-white
                 md:dark:hover:bg-transparent
               "
-              >About</a
-            >
+            />
           </li>
           <li>
             <a
@@ -203,7 +204,9 @@
 import { ref } from "vue";
 import { useUserStore } from "../stores/user";
 import { useRouter } from "vue-router";
+import PersonalRouter from "./PersonalRouter.vue";
 //CONST PARA USAR LA TIENDA DEL USUARIO PARA HACER MI SIGN OUT
+const route = "/clients-section";
 
 const user = useUserStore();
 //Función para hacer sign-out
