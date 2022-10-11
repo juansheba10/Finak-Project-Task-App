@@ -24,14 +24,14 @@
               whitespace-nowrap
               dark:text-white
             "
-            >Flowbite</span
+            >TaskApp</span
           >
         </a>
         <div class="flex items-center lg:order-2">
           <PersonalRouter
             href="#"
             text="Login"
-            :route="route1"
+            :route="route"
             class="
               text-gray-800
               dark:text-white
@@ -53,7 +53,7 @@
           <PersonalRouter
             href=""
             text="Get Started"
-            :route="route1"
+            :route="route"
             class="
               text-white
               bg-blue-700
@@ -72,6 +72,7 @@
               dark:focus:ring-primary-800
             "
           />
+
           <button
             data-collapse-toggle="mobile-menu-2"
             type="button"
@@ -330,13 +331,13 @@
               Speechless with how easy this was to integrate
             </h3>
             <p class="my-4">
-              "I recently got my hands on Flowbite Pro, and holy crap, I'm
+              "I recently got my hands on TaskApp Pro, and holy crap, I'm
               speechless with how easy this was to integrate within my
               application. Most templates are a pain, code is scattered, and
               near impossible to theme.
             </p>
             <p class="my-4">
-              Flowbite has code in one place and I'm not joking when I say it
+              TaskApp has code in one place and I'm not joking when I say it
               took me a matter of minutes to copy the code, customise it and
               integrate within a Laravel + Vue application.
             </p>
@@ -378,14 +379,14 @@
               Solid foundation for any project
             </h3>
             <p class="my-4">
-              "FlowBite provides a robust set of design tokens and components
+              "TaskApp provides a robust set of design tokens and components
               based on the popular Tailwind CSS framework. From the most used UI
               components like forms and navigation bars to the whole app screens
               designed both for desktop and mobile, this UI kit provides a solid
               foundation for any project.
             </p>
             <p class="my-4">
-              Designing with Figma components that can be easily translated to
+              Designing with TaskApp components that can be easily translated to
               the utility classes of Tailwind CSS is a huge timesaver!"
             </p>
           </blockquote>
@@ -396,7 +397,7 @@
               alt="profile picture"
             />
             <div class="space-y-0.5 font-medium dark:text-white text-left">
-              <div>Roberta Casas</div>
+              <div>Courtney Love</div>
               <div class="text-sm font-light text-gray-500 dark:text-gray-400">
                 Lead designer at Dropbox
               </div>
@@ -426,12 +427,12 @@
             </h3>
             <p class="my-4">
               "As someone who mainly designs in the browser, I've been a casual
-              user of Figma, but as soon as I saw and started playing with
-              FlowBite my mind was 🤯.
+              user, but as soon as I saw and started playing with TaskApp my
+              mind was 🤯.
             </p>
             <p class="my-4">
               Everything is so well structured and simple to use (I've learnt so
-              much about Figma by just using the toolkit).
+              much about just using the toolkit).
             </p>
             <p class="my-4">
               Aesthetically, the well designed components are beautiful and will
@@ -445,7 +446,7 @@
               alt="profile picture"
             />
             <div class="space-y-0.5 font-medium dark:text-white text-left">
-              <div>Jese Leos</div>
+              <div>Eddie Vedder</div>
               <div class="text-sm font-light text-gray-500 dark:text-gray-400">
                 Software Engineer at Facebook
               </div>
@@ -473,8 +474,7 @@
             </h3>
             <p class="my-4">
               "This is a very complex and beautiful set of elements. Under the
-              hood it comes with the best things from 2 different worlds: Figma
-              and Tailwind.
+              hood it comes with the best things from 2 different worlds.
             </p>
             <p class="my-4">
               You have many examples that can be used to create a fast prototype
@@ -488,7 +488,7 @@
               alt="profile picture"
             />
             <div class="space-y-0.5 font-medium dark:text-white text-left">
-              <div>Joseph McFall</div>
+              <div>Chris Cornell</div>
               <div class="text-sm font-light text-gray-500 dark:text-gray-400">
                 CTO at Google
               </div>
@@ -529,11 +529,10 @@
 </template>
 
 <script setup>
-import Nav from "./Nav.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import PersonalRouter from "./PersonalRouter.vue";
-import { useUserStore } from "../stores/user";
+
 import Footer from "./Footer.vue";
 
 const route = "/auth/sign-up";

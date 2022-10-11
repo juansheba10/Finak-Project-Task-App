@@ -10,11 +10,13 @@ const routes = [
     path: "/auth",
     component: Auth,
     children: [
-      { path: "login", component: SignIn },
+      {path: "login", component: SignIn,},
       { path: "sign-up", component: SignUp },
-      { path: "clients-section", component: ClientsSection },
+      {path:"clients-setion", component: ClientsSection}
     ],
+    
   },
+  ,
   { path: "/", component: Home },
 ];
 const router = createRouter({

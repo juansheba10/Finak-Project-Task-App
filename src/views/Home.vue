@@ -45,6 +45,7 @@ import { useTaskStore } from "../stores/task.js";
 import { useUserStore } from "@/stores/user.js";
 import Footer from "../components/Footer.vue";
 import "animate.css";
+
 // nos definimos la tienda del usuario dentro de una constante
 const taskStore = useTaskStore();
 // Inicializamos array de tareas
