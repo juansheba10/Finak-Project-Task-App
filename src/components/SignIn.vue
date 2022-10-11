@@ -78,18 +78,7 @@
               placeholder="Email Address"
             />
           </div>
-          <div
-            class="
-              flex
-              items-center
-              border-2
-              mb-12
-              py-2
-              px-3
-              rounded-2xl
-              bg-red-600
-            "
-          >
+          <div class="flex items-center border-2 mb-12 py-2 px-3 rounded-2xl">
             <!-- Ojo que se ve   -->
 
             <svg
@@ -216,7 +205,7 @@ import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline";
 // Route Variables
 const route = "/auth/sign-up";
 const buttonText = "Don't have an account";
-const route1 = "/auth/clients-section";
+const route1 = "/clients-section";
 // Input Fields
 const email = ref("");
 const password = ref("");

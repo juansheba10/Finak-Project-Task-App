@@ -12,11 +12,10 @@ const routes = [
     children: [
       {path: "login", component: SignIn,},
       { path: "sign-up", component: SignUp },
-      {path:"clients-setion", component: ClientsSection}
+      
     ],
-    
   },
-  ,
+  {path:"/clients-section", component: ClientsSection},
   { path: "/", component: Home },
 ];
 const router = createRouter({
