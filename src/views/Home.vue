@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nav />
-    <div class="bg-gray-100 dark:bg-gray-600">
+    <div class="bg-gray-300 dark:bg-gray-600">
       <NewTask @childNewTask="sendToStore" />
       <div
         class="

@@ -95,3 +95,10 @@ Además la navbar está lista y con el responsive.
 Hacer los estilos tanto del task item y del new task.
 Empezar el footer.
 ```
+
+### PLAN PARA EL 13/10
+
+```
+Ultimar detalles del proyecto.
+Dejar listo el DarkMode.
+```
