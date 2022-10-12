@@ -106,7 +106,7 @@
               ></path>
             </svg>
             <svg
-              class="hidden w-6 h-6"
+              class="w-6 h-6"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -533,9 +533,14 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import PersonalRouter from "./PersonalRouter.vue";
-
+import { useDark, useToggle } from "@vueuse/core";
 import Footer from "./Footer.vue";
 
 const route = "/auth/sign-up";
 const route1 = "/auth/login";
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+
+const darkLogo = ref(true);
 </script>

@@ -1,10 +1,22 @@
 <template>
   <div>
     <Nav />
-
-    <div class="bg-gray-100">
+    <div class="bg-gray-100 dark:bg-gray-600">
       <NewTask @childNewTask="sendToStore" />
-      <div class="flex m-2 mt-24 flex-wrap lg:ml-20 pl-5 md: ml-5 md:flex">
+      <div
+        class="
+          flex
+          m-2
+          mt-24
+          flex-wrap
+          lg:ml-20
+          pl-5
+          md:
+          ml-5
+          md:flex
+          dark:bg-gray-600 dark:border-gray-700
+        "
+      >
         <TaskItem
           class="ml-2 animate__animated animate__fadeInRight"
           @updateTasksAgain="readFromStore"
@@ -37,6 +49,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { useDark, useToggle } from "@vueuse/core";
 import Nav from "../components/Nav.vue";
 import NewTask from "@/components/NewTask.vue";
 import TaskItem from "../components/TaskItem.vue";

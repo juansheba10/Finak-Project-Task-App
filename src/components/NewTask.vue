@@ -1,8 +1,12 @@
-<template>
-  <div class="flex flex-col">
-    <h1 class="flex justify-center text-5xl font-bold m-3 mt-9">Create task</h1>
+<template class="">
+  <div class="flex flex-col dark:bg-gray-600">
+    <h1 class="flex justify-center text-5xl font-bold m-3 mt-9 dark:text-white">
+      Create task
+    </h1>
     <div>
-      <p class="mb-6 font-serif flex text-center justify-center">
+      <p
+        class="mb-6 font-serif flex text-center justify-center dark:text-white"
+      >
         Lists and cards are the building blocks of organizing work on a
         TaskCard. 📋
       </p>
@@ -19,10 +23,10 @@
           border border-gray-300
           sm:text-md
           focus:ring-blue-500 focus:border-blue-500
-          dark:bg-gray-700
+          dark:bg-gray-300
           dark:border-gray-600
           dark:placeholder-gray-400
-          dark:text-white
+          dark:text-gray-800
           dark:focus:ring-blue-500
           dark:focus:border-blue-500
           mb-4
@@ -50,10 +54,10 @@
           border border-gray-300
           sm:text-md
           focus:ring-blue-500 focus:border-blue-500
-          dark:bg-gray-700
+          dark:bg-gray-300
           dark:border-gray-600
           dark:placeholder-gray-400
-          dark:text-white
+          dark:text-gray-800
           dark:focus:ring-blue-500
           dark:focus:border-blue-500
           shadow-md
@@ -97,6 +101,7 @@
 
 <script setup>
 import { ref } from "vue";
+
 import { supabase } from "../supabase";
 import { useTaskStore } from "../stores/task.js";
 const emit = defineEmits(["childNewTask"]);
@@ -118,6 +123,7 @@ function uploadTask() {
     console.log(taskTitle.value);
   }
 }
+
 // constant to save a variable that define the custom event that will be emitted to the homeView
 
 // constant to save a variable that holds the value of the title input field of the new task

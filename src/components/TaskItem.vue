@@ -8,13 +8,13 @@
       rounded-lg
       border border-gray-200
       shadow-md
-      dark:bg-gray-800 dark:border-gray-700
       md:justify-center
       sm:h-full
       w-full
       md:w-2/5 md:
       m-5
       animate-animated animate-fadeInUp
+      dark:bg-gray-400
     "
     :data-id="taskData.id"
   >
@@ -42,7 +42,7 @@
           font-bold
           tracking-tight
           text-gray-900
-          dark:text-white
+          dark:text-gray-700
           flex
           justify-center
           tranition
@@ -56,7 +56,7 @@
           mb-3
           font-normal
           text-gray-700
-          dark:text-gray-400
+          dark:text-gray-900
           flex
           justify-center
         "
@@ -82,7 +82,7 @@
             rounded-lg
             hover:bg-green-800
             focus:ring-4 focus:outline-none focus:ring-blue-300
-            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+            dark:bg-green-600 dark:hover:green-700 dark:focus:ring-green-800
           "
         >
           DONE
@@ -102,7 +102,9 @@
             rounded-lg
             hover:bg-orange-800
             focus:ring-4 focus:outline-none focus:ring-blue-300
-            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+            dark:bg-orange-600
+            dark:hover:bg-orange-700
+            dark:focus:ring-orange-800
           "
         >
           Edit
@@ -121,7 +123,7 @@
             rounded-lg
             hover:bg-red-800
             focus:ring-4 focus:outline-none focus:ring-blue-300
-            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+            dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-500
           "
         >
           Delete
