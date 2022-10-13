@@ -43,7 +43,7 @@
               ></path>
             </svg>
             <svg
-              v-else="darkLogo"
+              v-else
               @click="toggleDark(), (darkLogo = !darkLogo)"
               class="w-5 h-5"
               fill="currentColor"
