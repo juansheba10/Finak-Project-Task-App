@@ -1,7 +1,5 @@
 <template>
-  <footer
-    class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900"
-  >
+  <footer class="p-4 bg-white shadow md:px-6 md:py-8 dark:bg-gray-900">
     <div class="sm:flex sm:items-center sm:justify-between">
       <a href="" class="flex items-center mb-4 sm:mb-0">
         <img
@@ -24,7 +22,7 @@
       <ul
         class="
           flex flex-wrap
-          sm:flex sm:ml-20 sm:flex-row
+          sm:flex sm:ml-2 sm:flex-row
           items-center
           mb-6
           text-sm text-gray-500

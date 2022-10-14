@@ -8,8 +8,8 @@ module.exports = {
   content: ["./node_modules/flowbite/**/*.js"],
   theme: {
     screens: {
-      'sm': '440px',
-      'md': "788px",
+      'sm': '340px',
+      'md': "588px",
       'lg': "1024px",
     },
     extend: {},

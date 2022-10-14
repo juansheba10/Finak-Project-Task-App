@@ -13,7 +13,7 @@
           pl-5
           md:
           ml-5
-          md:flex
+          md:flex md:justify-center
           dark:bg-gray-600 dark:border-gray-700
         "
       >
@@ -25,8 +25,8 @@
           :taskData="task"
         ></TaskItem>
       </div>
+      <Footer />
     </div>
-    <Footer />
   </div>
 
   <!-- <div>
