@@ -3,7 +3,7 @@
   <form class="form-widget" @submit.prevent="updateProfile, getProfile">
     <div>
       <div class="">
-        <div class="md:col-span-1">
+        <div class="md:col-span-1 lg:justify-center lg:flex lg:w-1/2">
           <div class="px-4 sm:px-0">
             <h1
               class="

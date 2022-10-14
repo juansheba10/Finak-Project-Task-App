@@ -13,7 +13,7 @@
           pl-5
           md:
           ml-5
-          md:flex md:justify-center
+          md:flex md:
           dark:bg-gray-600 dark:border-gray-700
         "
       >
