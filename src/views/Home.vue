@@ -25,9 +25,6 @@
           :taskData="task"
         ></TaskItem>
       </div>
-      <p class="flex justify-center">
-        Total tasks: {{ doneTaskArray.length }} / {{ taskArray.length }}
-      </p>
     </div>
     <Footer />
   </div>

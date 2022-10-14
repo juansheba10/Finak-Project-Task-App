@@ -94,8 +94,26 @@
       </button>
     </div>
   </div>
-  <div>
-    <h3 v-if="errorBool">{{ emptyString }}</h3>
+  <div class="flex justify-center">
+    <div
+      class="
+        p-4
+        mb-4
+        text-sm text-yellow-700
+        bg-yellow-200
+        rounded-lg
+        dark:bg-yellow-200 dark:text-yellow-800
+        animate__animated animate__fadeInDown
+        w-1/3
+        flex
+        justify-center
+        align-center
+      "
+      role="alert"
+      v-if="errorBool"
+    >
+      <span class="font-medium"> {{ emptyString }}</span>
+    </div>
   </div>
 </template>
 
@@ -110,12 +128,24 @@ let taskDesc = ref("");
 let errorBool = ref(false);
 const emptyString = ref("");
 function uploadTask() {
-  if (taskTitle.value === "") {
+  if (taskTitle.value === "" && taskDesc.value === "") {
     errorBool.value = true;
-    emptyString.value = "Title is required.";
+    emptyString.value = "Title and Description are required.";
     setTimeout(() => {
       errorBool.value = false;
-    }, 1000);
+    }, 3000);
+  } else if (taskDesc.value === "") {
+    errorBool.value = true;
+    emptyString.value = "Description is required.";
+    setTimeout(() => {
+      errorBool.value = false;
+    }, 3000);
+  } else if (taskTitle.value === "") {
+    errorBool.value = true;
+    emptyString.value = "Title and Description are required.";
+    setTimeout(() => {
+      errorBool.value = false;
+    }, 3000);
   } else {
     emit("childNewTask", taskTitle.value, taskDesc.value);
     taskTitle.value = "";

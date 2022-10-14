@@ -101,4 +101,5 @@ Empezar el footer.
 ```
 Ultimar detalles del proyecto.
 Dejar listo el DarkMode.
+Cambiar redirección sign Up
 ```
