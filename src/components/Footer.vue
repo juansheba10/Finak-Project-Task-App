@@ -22,7 +22,7 @@
       <ul
         class="
           flex flex-wrap
-          sm:flex sm:ml-2 sm:flex-row
+          sm:flex sm:ml-12 sm:flex-row
           items-center
           mb-6
           text-sm text-gray-500
