@@ -124,7 +124,7 @@
             hidden
             justify-between
             items-center
-            w-1/2
+            w-full
             lg:flex lg:w-auto lg:order
           "
           id="mobile-menu-2"
